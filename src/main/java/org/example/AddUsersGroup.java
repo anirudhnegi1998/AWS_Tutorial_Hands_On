@@ -2,7 +2,6 @@ package org.example;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.AddUserToGroupRequest;
-import software.amazon.awssdk.services.iam.model.AddUserToGroupResponse;
 import software.amazon.awssdk.services.iam.model.IamException;
 
 public class AddUsersGroup {
