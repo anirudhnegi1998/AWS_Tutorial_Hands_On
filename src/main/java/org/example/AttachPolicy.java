@@ -17,7 +17,7 @@ public class AttachPolicy {
                     .policyArn(policyArn)
                     .build();
 
-            AttachUserPolicyResponse response = iam.attachUserPolicy(request);
+            iam.attachUserPolicy(request);
             System.out.println("Policy attached to :"+ userName);
         }catch (IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
