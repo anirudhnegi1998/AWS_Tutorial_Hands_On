@@ -31,6 +31,7 @@ public class CreateRoles {
 
             CreateRoleResponse response = iam.createRole(request);
             System.out.println("The new Java Role created: "+ response.role().roleName());
+            iam.close();
         } catch(IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
