@@ -2,7 +2,6 @@ package org.example;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.AttachUserPolicyRequest;
-import software.amazon.awssdk.services.iam.model.AttachUserPolicyResponse;
 import software.amazon.awssdk.services.iam.model.IamException;
 
 public class AttachPolicy {
