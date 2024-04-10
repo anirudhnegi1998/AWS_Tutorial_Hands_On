@@ -10,6 +10,7 @@ public class CreateRoles {
         try{
             IamClient iam = IamClient.builder().build();
             String rolename = "MyNewJavaRole";
+            //Add your service here which you want to assume role for
             String trust = """
                     {
                         "Version": "2012-10-17",
@@ -17,7 +18,7 @@ public class CreateRoles {
                             {
                                 "Effect": "Allow",
                                 "Principal": {
-                                    "Service": "ec2.amazonaws.com"
+                                    "Service": "ec2.amazonaws.com" 
                                 },
                                 "Action": "sts:AssumeRole"
                             }
