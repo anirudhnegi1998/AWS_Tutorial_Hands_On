@@ -9,8 +9,8 @@ public class DeleteIAMGroup {
     public static void main(String[] args) {
         try{
             IamClient iam = IamClient.builder().build();
-            String groupName = "MyNewGroup";
-            String user = "NewUser";
+            String groupName = "MyNewGroup"; //add the group name you want to interact with
+            String user = "NewUser"; // first delete all the users from group before deleting group
 
             RemoveUserFromGroupRequest request_user = RemoveUserFromGroupRequest.builder()
                     .groupName(groupName)
