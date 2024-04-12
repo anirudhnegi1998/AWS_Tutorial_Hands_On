@@ -16,7 +16,6 @@ public class DetachPolicy {
                     .build();
             iam.detachUserPolicy(request);
             System.out.println("Detached User Policy for user: "+ username);
-            iam.close();
         }catch (IamException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
         }
