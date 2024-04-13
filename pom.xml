@@ -23,13 +23,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-            <dependency>
-                <groupId>software.amazon.awssdk</groupId>
-                <artifactId>ec2</artifactId>
-                <version>2.20.144</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -38,6 +31,12 @@
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>iam</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>ec2</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
