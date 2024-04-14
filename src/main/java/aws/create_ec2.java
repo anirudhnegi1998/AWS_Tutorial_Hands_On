@@ -24,6 +24,7 @@ public class create_ec2 {
             Instance instance = response.instances().get(0);
             String instanceId = instance.instanceId();
             System.out.println("EC2 with IAM Instance Profile "+ instanceProfileName + " launched Instance ID: "+instanceId);
+            ec2Client.close();
         }catch(Ec2Exception e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
