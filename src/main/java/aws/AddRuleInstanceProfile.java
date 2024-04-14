@@ -20,7 +20,7 @@ public class AddRuleInstanceProfile {
 
             AddRoleToInstanceProfileResponse response = iam.addRoleToInstanceProfile(request);
             System.out.println("Added role :"+rolename + " to instance profile: "+ instanceProfileName);
-
+            iam.close();
         }catch(IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
