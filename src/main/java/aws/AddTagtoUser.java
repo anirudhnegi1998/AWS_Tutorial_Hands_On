@@ -25,7 +25,7 @@ public class AddTagtoUser {
             iam.tagUser(request);
             System.out.println("Added tag to user: "+ username);
         }catch (IamException e){
-            e.awsErrorDetails().errorMessage();
+            System.err.println(e.awsErrorDetails().errorMessage());
         }
     }
 }
