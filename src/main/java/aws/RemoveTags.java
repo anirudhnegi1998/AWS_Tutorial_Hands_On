@@ -24,6 +24,7 @@ public class RemoveTags {
         try{
             iam.untagUser(untagUserRequest);
             System.out.println("Untagged user successfully: "+ username);
+            iam.close();
         }catch(IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }

@@ -30,6 +30,7 @@ public class ListTag {
                     System.out.println("No tags found");
                 }
             }
+            iam.close();
         }catch (IamException e) {
             System.err.println(e.awsErrorDetails().errorMessage());
         }
