@@ -10,8 +10,8 @@ public class AddRuleInstanceProfile {
 
         try {
             IamClient iam = IamClient.builder().build();
-            String rolename = "MyNewJavaRole";
-            String instanceProfileName = "MyNewJavaProfile";
+            String rolename = "MyNewJavaRole"; //role we created
+            String instanceProfileName = "MyNewJavaProfile"; //new instance we are creating
 
             AddRoleToInstanceProfileRequest request = AddRoleToInstanceProfileRequest.builder()
                     .instanceProfileName(instanceProfileName)
