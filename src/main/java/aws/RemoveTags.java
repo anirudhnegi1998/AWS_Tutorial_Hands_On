@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class RemoveTags {
     public static void main(String[] args) {
         IamClient iam = IamClient.builder().build();
-        String username = "NewUser";
+        String username = "NewUser"; //user from which we will remove tags
         List<String> tagkeys = new ArrayList<>();
 
         tagkeys.add("Department");

@@ -18,9 +18,14 @@ public class ListTag {
                 ListUserTagsRequest listUserTagsRequest = ListUserTagsRequest.builder().userName(userName).build();
                 ListUserTagsResponse listUserTagsResponse = iam.listUserTags(listUserTagsRequest);
 
-                List<Tag> tags = listUserTagsResponse.tags();
+                List<Tag> tags = listUserTagsResponse.tags(); //Get all tags in a list
                 System.out.println("User : " + userName+ " Tags : " + tags.size());
 
+                /*
+                It may happen that some of the users dont have tags, we will
+                filter out those users and get only those users which has one or
+                more tags
+                 */
                 if(tags.size() > 0){
                     for(Tag tag : tags){
                         System.out.println(tag.key() + " : " + tag.value());
