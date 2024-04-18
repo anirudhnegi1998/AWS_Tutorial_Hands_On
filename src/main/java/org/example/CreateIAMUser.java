@@ -12,6 +12,7 @@ public class CreateIAMUser {
             CreateUserRequest request = CreateUserRequest.builder().userName("NewUser").build();
             CreateUserResponse response = iam.createUser(request);
             System.out.println(response);
+            iam.close();
         } catch(IamException e){
             System.err.println((e.awsErrorDetails().errorMessage()));
         }
