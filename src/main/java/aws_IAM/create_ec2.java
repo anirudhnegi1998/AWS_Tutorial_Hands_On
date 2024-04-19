@@ -1,4 +1,4 @@
-package aws;
+package aws_IAM;
 
 import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.ec2.model.*;

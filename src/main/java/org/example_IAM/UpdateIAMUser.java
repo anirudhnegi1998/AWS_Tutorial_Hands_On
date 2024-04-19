@@ -1,4 +1,4 @@
-package org.example;
+package org.example_IAM;
 import software.amazon.awssdk.services.iam.model.UpdateUserRequest;
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.IamException;

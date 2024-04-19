@@ -1,9 +1,8 @@
-package aws;
+package aws_IAM;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.AttachRolePolicyRequest;
 import software.amazon.awssdk.services.iam.model.AttachRolePolicyResponse;
-import software.amazon.awssdk.services.iam.model.AttachUserPolicyResponse;
 import software.amazon.awssdk.services.iam.model.IamException;
 
 public class AttachPolicyToRole {

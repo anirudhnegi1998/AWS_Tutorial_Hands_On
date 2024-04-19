@@ -1,8 +1,7 @@
-package org.example;
+package org.example_IAM;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.AttachGroupPolicyRequest;
-import software.amazon.awssdk.services.iam.model.AttachGroupPolicyResponse;
 import software.amazon.awssdk.services.iam.model.IamException;
 
 public class AttachPolicyGroup {

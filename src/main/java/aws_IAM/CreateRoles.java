@@ -1,4 +1,4 @@
-package aws;
+package aws_IAM;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.CreateRoleRequest;

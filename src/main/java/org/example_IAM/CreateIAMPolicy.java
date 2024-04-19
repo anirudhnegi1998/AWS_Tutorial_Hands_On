@@ -1,43 +1,38 @@
-package aws;
+package org.example_IAM;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.CreatePolicyRequest;
 import software.amazon.awssdk.services.iam.model.CreatePolicyResponse;
 import software.amazon.awssdk.services.iam.model.IamException;
 
-public class CreatePolicy {
+public class CreateIAMPolicy {
     public static void main(String[] args) {
         try{
             IamClient iam = IamClient.builder().build();
-            String role = "MyNewJavaRole";
-            String policyName = "MyNewJavaPolicy";
-            String policyDocument = """
+            String customPolicy = """
                     {
                         "Version": "2012-10-17",
                         "Statement": [
                             {
                                 "Effect": "Allow",
                                 "Action": [
-                                    "s3:Get*",
-                                    "s3:List*",
-                                    "s3:Describe*",
-                                    "s3-object-lambda:Get*",
-                                    "s3-object-lambda:List*"
+                                    "s3:ListBucket",
+                                    "s3:ListAllMyBuckets"
                                 ],
-                                "Resource": "arn:aws:s3:::myawsbucket123z"
+                                "Resource": "arn:aws:s3:::*"
                             }
                         ]
                     }""";
             CreatePolicyRequest request = CreatePolicyRequest.builder()
-                    .policyDocument(policyDocument)
-                    .policyName(policyName)
-                    .description("My S3 read only policy")
-                    .build();
+                            .policyName("JavaNewPolicy")
+                            .policyDocument(customPolicy)
+                            .description("My custom Policy for listing only").build();
+
             CreatePolicyResponse response = iam.createPolicy(request);
-            System.out.println("Created Policy :"+policyName);
+            System.out.println("Custom policy is created with ARN:" + response.policy().arn());
             iam.close();
-        }catch(IamException e) {
-            System.err.println(e.awsErrorDetails().errorMessage());
+        } catch (IamException e){
+            System.out.println(e.awsErrorDetails().errorMessage());
         }
     }
 }

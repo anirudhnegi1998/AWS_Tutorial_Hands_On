@@ -1,4 +1,4 @@
-package aws;
+package aws_IAM;
 
 import software.amazon.awssdk.services.iam.IamClient;
 import software.amazon.awssdk.services.iam.model.IamException;
@@ -7,7 +7,6 @@ import software.amazon.awssdk.services.iam.model.TagUserRequest;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.DeflaterOutputStream;
 
 public class AddTagtoUser {
     public static void main(String[] args) {
