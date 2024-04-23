@@ -27,7 +27,7 @@ public class CreateIAMPolicy {
 
             CreatePolicyResponse response = iam.createPolicy(request);
             System.out.println("Policy created: " + response.policy());
-            iam.close();
+
         }catch(IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
