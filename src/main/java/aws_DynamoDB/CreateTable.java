@@ -23,7 +23,7 @@ public class CreateTable {
                     .build();
 
             CreateTableRequest createTableRequest = CreateTableRequest.builder()
-                    .tableName("UserTable")q
+                    .tableName("UserTable")
                     .attributeDefinitions(partitionKey)
                     .keySchema(keySchemaElement)
                     .provisionedThroughput(provisionedThroughput)
@@ -31,6 +31,7 @@ public class CreateTable {
 
             CreateTableResponse createTableResponse = dynamoDbClient.createTable(createTableRequest);
             System.out.println("Created Table: "+ createTableResponse.tableDescription().tableName());
+            dynamoDbClient.close();
         }catch(DynamoDbException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
