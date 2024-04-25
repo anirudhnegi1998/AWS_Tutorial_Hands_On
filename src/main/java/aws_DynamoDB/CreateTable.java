@@ -31,7 +31,6 @@ public class CreateTable {
 
             CreateTableResponse createTableResponse = dynamoDbClient.createTable(createTableRequest);
             System.out.println("Created Table: "+ createTableResponse.tableDescription().tableName());
-            dynamoDbClient.close();
         }catch(DynamoDbException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
