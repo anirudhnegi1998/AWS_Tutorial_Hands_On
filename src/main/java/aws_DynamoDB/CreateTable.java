@@ -34,8 +34,5 @@ public class CreateTable {
         }catch(DynamoDbException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
-        finally {
-            dynamoDbClient.close();
-        }
     }
 }
