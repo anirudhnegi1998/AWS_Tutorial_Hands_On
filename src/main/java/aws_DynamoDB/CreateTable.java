@@ -33,6 +33,8 @@ public class CreateTable {
             System.out.println("Created Table: "+ createTableResponse.tableDescription().tableName());
         }catch(DynamoDbException e){
             System.err.println(e.awsErrorDetails().errorMessage());
+        }finally {
+            dynamoDbClient.close();
         }
     }
 }
