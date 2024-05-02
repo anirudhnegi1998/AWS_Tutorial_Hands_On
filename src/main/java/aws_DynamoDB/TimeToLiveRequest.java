@@ -18,7 +18,7 @@ public class TimeToLiveRequest {
                             .build())
                     .build();
             client.updateTimeToLive(request);
-            System.out.println("TTL configured");
+            System.out.println("TTL configured"); // Time to Live configured
         }catch (DynamoDbException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }finally {
