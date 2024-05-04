@@ -22,8 +22,6 @@ public class Test {
                 System.out.println("TTL configured"); // Time to Live configured
             }catch (DynamoDbException e){
                 System.err.println(e.awsErrorDetails().errorMessage());
-            }finally {
-                client.close();
             }
         }
     }
