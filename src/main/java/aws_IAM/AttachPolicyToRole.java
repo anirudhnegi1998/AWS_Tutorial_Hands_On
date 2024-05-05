@@ -19,7 +19,7 @@ public class AttachPolicyToRole {
 
             AttachRolePolicyResponse response = iam.attachRolePolicy(request);
             System.out.println("Attached policy : "+ policyArn+ " attached to IAM role: "+ role);
-            iam.close();
+       
         }catch(IamException e){
             System.err.println(e.awsErrorDetails().errorMessage());
         }
