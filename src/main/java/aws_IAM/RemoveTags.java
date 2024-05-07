@@ -16,6 +16,8 @@ public class RemoveTags {
         tagkeys.add("Department");
         tagkeys.add("Project");
 
+
+        
         UntagUserRequest untagUserRequest = UntagUserRequest.builder()
                 .userName(username)
                 .tagKeys(tagkeys)
